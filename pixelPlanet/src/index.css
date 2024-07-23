@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.logoSize {
+  width: 225px;
+  height: auto;
+}
+
+@media (max-width: 1280px) {
+  .xl\:logoSize-xl {
+    width: 225px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .lg\:logoSize-lg {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .md\:logoSize-md {
+    width: 177px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sm\:logoSize-sm {
+    width: 155px;
+  }
+}
+
+@media (max-width: 428px) {
+  .pResOne\:logoSize-pResOne {
+    width: 120px;
+  }
+}
+
+@media (max-width: 320px) {
+  .pResTwo\:logoSize-pResTwo {
+    width: 100px;
+  }
+}
+
+
+
+
+
+.shipLogoSize {
+  width: 10px;
+  height: auto;
+}
+
+@media (max-width: 1280px) {
+  .xl\:shipLogoSize-xl {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .lg\:shipLogoSize-lg {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .md\:shipLogoSize-md {
+    width: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sm\:shipLogoSize-sm {
+    width: 200px;
+  }
+}
+
+@media (max-width: 428px) {
+  .pResOne\:shipLogoSize-pResOne {
+    width: 200px;
+  }
+}
+
+@media (max-width: 320px) {
+  .pResTwo\:shipLogoSize-pResTwo {
+    width: 160px;
+  }
+}
+
+
+.planetLogoAttributes {
+  bottom: 110px;
+}
+
+@media (max-width: 1280px) {
+  .xl\:planetLogoAttributes-xl {
+    bottom: 110px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .lg\:planetLogoAttributes-lg {
+    bottom: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .md\:planetLogoAttributes-md {
+    bottom: 70px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sm\:planetLogoAttributes-sm {
+    bottom: 60px;
+  }
+}
+
+@media (max-width: 428px) {
+  .pResOne\:planetLogoAttributes-pResOne {
+    bottom: 75px;
+  }
+}
+
+@media (max-width: 320px) {
+  .pResTwo\:planetLogoAttributes-pResTwo {
+    bottom: 80px;
+  }
+}
+
+
+
+.shadow-up-2xl {
+  box-shadow: 0 -15px 30px rgba(0, 0, 0, 0.2); /* Adjust shadow properties */
+}
+
+.homePageBg {
+  background-image: url('/src/assets/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  height: 100vh;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.communityPageBg {
+  background-image: url('/src/assets/oceanBackground.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  height: 100vh;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.SupportPageBg {
+  background-color:#1B1919;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  height: 100vh;
+  overflow-y: auto; /* Enables vertical scrolling */
+  overflow-x: hidden; /* Enables vertical scrolling */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.SupportPageBg::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.SupportPageBg {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+
+
+.animate-slide-left {
+  display: flex;
+  animation: slide-left 25s linear infinite;
+}
+
+.animate-slide-left img {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes flash {
+  0% {
+    background-color: white;
+  }
+  1% {
+    background-color: white;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.flash-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  animation: flash .8s ease-in-out;
+  z-index: 1000;
+}
